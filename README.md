@@ -32,10 +32,21 @@ npm run dev        # http://localhost:3000
 ```
 
 ```bash
-npm run build      # production build
-npm start          # serve the build
-npm run lint       # eslint
+npm run build       # static export to ./out
+npx serve out       # preview the export locally
+npm run lint        # eslint
 ```
+
+## Deployment
+
+Pushes to `main` build a static export (`output: "export"` in
+[next.config.ts](next.config.ts)) and deploy it to GitHub Pages via
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml). `basePath`/`assetPrefix`
+are derived automatically from `GITHUB_REPOSITORY` at build time, so the same config
+works locally (served at `/`) and on Pages (served at `/<repo-name>/`).
+
+One-time setup: repo **Settings → Pages → Build and deployment → Source →
+GitHub Actions**.
 
 ## Highlights
 
