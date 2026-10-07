@@ -50,7 +50,7 @@ type Action =
   | { type: "SUBMIT_SUCCESS" }
   | { type: "RESET" };
 
-const initialState: FormState = {
+export const initialState: FormState = {
   values: {
     name: "",
     email: "",
@@ -89,11 +89,11 @@ const validators: Record<Field, (v: FormValues) => string | undefined> = {
   message: () => undefined,
 };
 
-function validateField(field: Field, values: FormValues) {
+export function validateField(field: Field, values: FormValues) {
   return validators[field](values);
 }
 
-function validateAll(values: FormValues): FormState["errors"] {
+export function validateAll(values: FormValues): FormState["errors"] {
   const errors: FormState["errors"] = {};
   (Object.keys(validators) as Field[]).forEach((field) => {
     const error = validateField(field, values);
@@ -102,7 +102,7 @@ function validateAll(values: FormValues): FormState["errors"] {
   return errors;
 }
 
-function reducer(state: FormState, action: Action): FormState {
+export function reducer(state: FormState, action: Action): FormState {
   switch (action.type) {
     case "SET_FIELD": {
       const values = { ...state.values, [action.field]: action.value };

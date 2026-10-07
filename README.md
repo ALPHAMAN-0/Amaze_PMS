@@ -35,6 +35,7 @@ npm run dev        # http://localhost:3000
 npm run build       # static export to ./out
 npx serve out       # preview the export locally
 npm run lint        # eslint
+npm test            # node:test suite: form logic, site content, config integrity
 ```
 
 ## Deployment
