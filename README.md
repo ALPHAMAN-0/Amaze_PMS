@@ -6,6 +6,18 @@ rebuilt as a premium, animation-rich marketing site. Built as a hiring assignmen
 the business facts are real, the design system ("Quiet Precision") and all copy,
 graphics, and code are original.
 
+## Architecture / How it Works
+
+```mermaid
+flowchart LR
+    A[User] --> B[Amaze Pms]
+    B --> C{Logic}
+    C --> D[(Data)]
+    C --> E[Output]
+    D --> C
+```
+
+
 ## Tech Stack
 
 | Layer | Choice |
