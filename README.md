@@ -9,12 +9,15 @@ graphics, and code are original.
 ## Architecture / How it Works
 
 ```mermaid
-flowchart LR
-    A[User] --> B[Amaze Pms]
-    B --> C{Logic}
-    C --> D[(Data)]
-    C --> E[Output]
-    D --> C
+flowchart TD
+    App_Router --> Layout_Providers
+    App_Router --> Sections
+    Layout_Providers --> Lib
+    Sections --> UI_Components
+    Sections --> Graphics
+    Sections --> Lib
+    UI_Components --> Lib
+    Lib --> Types
 ```
 
 
