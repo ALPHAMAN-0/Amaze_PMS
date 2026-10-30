@@ -2,7 +2,7 @@
   "name": "amaze-pms",
   "version": "0.1.0",
   "private": true,
-  "description": "Premium, animation-rich marketing site rebuild for Amaze Property Management Solutions — built with Next.js 15, React 19, TypeScript, GSAP, Motion, and Lenis.",
+  "description": "Premium, animation-rich marketing site rebuild for Amaze Property Management Solutions \u2014 built with Next.js 15, React 19, TypeScript, GSAP, Motion, and Lenis.",
   "keywords": [
     "nextjs",
     "react",
